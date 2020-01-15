@@ -1,9 +1,15 @@
 {% extends 'layout.html' %}
+{% load static %}
 
 
 {% block content %}
   <div id="content">
-    <h3>Select your .xlsx file to upload</h3>
+    <h1>Select your .xlsx file to upload</h1>
+    <h3>Please make sure data in the excel file is in the format </h3>
+    <p>('firstname', 'lastname', 'date of birth', 'date of employment', 'position', 'department', 'salary', 'supervisors')</p>
+    <label>An exxample is </label>
+    <img src={% static "img/screenshot.png" %} alt="screenshot" >
+
     <form action={% url 'employees:upload_data' %} method="post" enctype="multipart/form-data">
       {% csrf_token %}
       <input type="file" name="employee_data" accept=".xlsx">
