@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+  <div id="content">
+    <h3>Select your .xlsx file to upload</h3>
+    <form action={% url 'employees:upload_data' %} method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="employee_data" accept=".xlsx">
+      <br>
+      <button id="submit-btn" class="ui primary button">Upload</button>
+    </form>
+  </div>
+{% endblock content %}
+  

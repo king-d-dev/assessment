@@ -1,0 +1,17 @@
+{% extends 'layout.html' %} {% block content %}
+<div id="content">
+  <h1>Welcome Home</h1>
+  <p>We have the following actions you can perform</p>
+  <ul>
+    <li>
+      <a href="{% url 'employees:uploads_log' %}">View log/list of all uploads</a>
+    </li>
+    <li>
+      <a href={% url 'employees:upload_data' %}>upload employee data stored in an Excel file</a>
+    </li>
+    <li>
+      <a href="{% url 'employees:list' %}">View all employees</a>
+    </li>
+  </ul>
+</div>
+{% endblock content %}

@@ -1,0 +1,19 @@
+body {
+  margin: 50px;
+}
+
+.step {
+  margin-left: 30px;
+}
+
+nav#home {
+  margin-bottom: 50px;
+}
+
+button#submit-btn {
+  margin-top: 20px;
+}
+
+nav#home a {
+  margin-right: 100px;
+}
